@@ -11,10 +11,8 @@ class Solution(object):
         while lower_bound <= upper_bound:
             midpoint = (lower_bound + upper_bound) // 2
         
-            
-            if nums[midpoint] == target: 
-                return midpoint
-            elif nums[midpoint] > target:
+        
+            if nums[midpoint] > target:
                 upper_bound = midpoint - 1
             elif nums[midpoint] < target:
                 lower_bound = midpoint + 1
