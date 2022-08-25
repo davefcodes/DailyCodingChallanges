@@ -6,16 +6,18 @@ class Solution(object):
         :rtype: int
         """
         lower_bound = 0
-        upper_bound = len(nums) -1
-        mid_point = 0
+        upper_bound = len(nums) - 1
         
         while lower_bound <= upper_bound:
-            mid_point = (upper_bound + lower_bound) // 2
+            midpoint = (lower_bound + upper_bound) // 2
+        
             
-            if nums[mid_point] < target:
-               lower_bound = mid_point + 1
-            elif nums[mid_point] > target:
-                upper_bound = mid_point - 1
+            if nums[midpoint] == target: 
+                return midpoint
+            elif nums[midpoint] > target:
+                upper_bound = midpoint - 1
+            elif nums[midpoint] < target:
+                lower_bound = midpoint + 1
             else:
-                return mid_point
+                return midpoint
         return -1
