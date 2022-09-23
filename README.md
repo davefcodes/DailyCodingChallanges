@@ -1,2 +1,2 @@
 # Leetcode
-Collection of LeetCode questions to ace the coding interview. 
+Collection of my daily LeetCode questions and solution to get better at data structure and algorithms. 
